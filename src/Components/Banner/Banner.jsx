@@ -13,8 +13,8 @@ const Banner = () => {
 
         <div className="container mt-1">
         <div className="logo-container d-flex justify-content-end align-items-center">
-          <img src={napps_logo} alt="trenova logo" className='z-2 logo mx-2'/>
-          <p className="text-dark text-uppercase m-0 mx-2">in conjuction with</p>
+          {/* <img src={napps_logo} alt="trenova logo" className='z-2 logo me-3'/>
+          <p className="text-uppercase m-0 me-3">in conjuction with</p> */}
           <img src={trenova_logo} alt="trenova logo" className='z-2 logo'/>
         </div>
           </div> 
@@ -28,7 +28,7 @@ const Banner = () => {
               <div className="date-box d-flex align-items-center mb-4">
                   <FontAwesomeIcon icon={faCalendarDays} className='icon me-2' />
                   <p className='banner__p m-0'>
-                    <span className='d-block'>27, November, 2024</span>
+                    <span className='d-block'>November 27th, 2024</span>
                     <span className="d-block">2:00 pm</span>
                   </p>
               </div>
@@ -40,9 +40,9 @@ const Banner = () => {
 
             </div>
 
-              <div className='speaker-container'>
-                <img src={speaker_picture} alt="speaker" className='img-fluid rounded-circle shadow-lg'/>
-              </div>
+            <div className='speaker-container'>
+              <img src={speaker_picture} alt="speaker" className='img-fluid rounded-circle shadow-lg'/>
+            </div>
           </div>
           
         </div>

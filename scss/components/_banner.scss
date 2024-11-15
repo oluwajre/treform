@@ -4,7 +4,6 @@
 .banner {
     background-image: linear-gradient(rgba($baby-white, 0.55), rgba($baby-white, 0.55)), url('../../src/assets/images/banner/background-image.webp');
     width: 100vw;
-    // height: 400px;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -25,16 +24,6 @@
         transform: rotate(-7deg);
     }
 
-    // .main-logo {
-    //     width: 120px;
-    //     top: 3%;
-    //     left: 65%;
-
-    //     @include media-breakpoint-up(sm) {
-    //         left: 80%;
-    //     }
-    // }
-
     .logo-container {
 
         .logo {
@@ -45,6 +34,7 @@
         p {
             font-size: .8rem;
             font-weight: 800;
+            color: $baby-black;
         }
         
     }
@@ -60,24 +50,20 @@
 
 }
 
-.backround-circle {
-    width: 100vw;
-    height: 100vw;
-    background-color: $secondary;
-    border-radius: 50%;
+.stamp {
+    width: 30%;
+    top: 10%;
+    left: 110%;
+    max-width: 100px;
+    z-index: 100;
 
     @include media-breakpoint-up(sm) {
-        width: 40vw;
-        height: 40vw;
+        top: 25%;
+        left: 75%;
     }
 
-    .speaker-text {
-        top: 40%;
-        left: 27%;
-
-        span {
-            display: block;
-        }
+    img {
+        width: 100%;
     }
 }
 
@@ -99,20 +85,24 @@
 }
 
 
-.stamp {
-    width: 30%;
-    top: 10%;
-    left: 110%;
-    max-width: 100px;
-    z-index: 100;
+.backround-circle {
+    width: 100vw;
+    height: 100vw;
+    background-color: $secondary;
+    border-radius: 50%;
 
     @include media-breakpoint-up(sm) {
-        top: 25%;
-        left: 75%;
+        width: 40vw;
+        height: 40vw;
     }
 
-    img {
-        width: 100%;
+    .speaker-text {
+        top: 40%;
+        left: 27%;
+
+        span {
+            display: block;
+        }
     }
 }
 

@@ -11852,12 +11852,6 @@ textarea.form-control-lg {
   font-family: "Poppins", serif;
   color: #112F3A;
 }
-.display-3__gradient {
-  background-image: linear-gradient(to right, rgba(234, 136, 34, 0.95), rgba(94, 23, 221, 0.95));
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
 
 .banner__p {
   display: inline-block;
@@ -11906,11 +11900,46 @@ textarea.form-control-lg {
 .banner .logo-container p {
   font-size: 0.8rem;
   font-weight: 800;
+  color: #112F3A;
 }
 
 .date-box .icon {
   color: #5E17DD;
   font-size: 2rem;
+}
+
+.stamp {
+  width: 30%;
+  top: 10%;
+  left: 110%;
+  max-width: 100px;
+  z-index: 100;
+}
+@media (min-width: 576px) {
+  .stamp {
+    top: 25%;
+    left: 75%;
+  }
+}
+.stamp img {
+  width: 100%;
+}
+
+.speaker-container {
+  position: absolute;
+  right: 0;
+  top: 30%;
+  width: 50%;
+  max-width: 300px;
+}
+@media (min-width: 576px) {
+  .speaker-container {
+    top: 10%;
+  }
+}
+.speaker-container img {
+  padding: 10px;
+  background: linear-gradient(to bottom, rgba(94, 23, 221, 0.95), rgba(234, 136, 34, 0.95));
 }
 
 .backround-circle {
@@ -11931,40 +11960,6 @@ textarea.form-control-lg {
 }
 .backround-circle .speaker-text span {
   display: block;
-}
-
-.speaker-container {
-  position: absolute;
-  right: 0;
-  top: 30%;
-  width: 50%;
-  max-width: 300px;
-}
-@media (min-width: 576px) {
-  .speaker-container {
-    top: 10%;
-  }
-}
-.speaker-container img {
-  padding: 10px;
-  background: linear-gradient(to bottom, rgba(94, 23, 221, 0.95), rgba(234, 136, 34, 0.95));
-}
-
-.stamp {
-  width: 30%;
-  top: 10%;
-  left: 110%;
-  max-width: 100px;
-  z-index: 100;
-}
-@media (min-width: 576px) {
-  .stamp {
-    top: 25%;
-    left: 75%;
-  }
-}
-.stamp img {
-  width: 100%;
 }
 
 /*# sourceMappingURL=custom.css.map */
