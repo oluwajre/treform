@@ -1,0 +1,17 @@
+@use '../general' as *;
+@use '../sections/mixins' as *;
+
+
+.button-main {
+    border: none;
+    font-weight: 600;
+    text-transform: uppercase;
+    padding: .5rem 1rem;
+    @include gradient;
+    @include transitionProperty;
+    
+
+    &:hover {
+        background-image: linear-gradient(to right, rgba($primary, 0.95) 100%, rgba($secondary, 0.95) 0%);
+    }
+}

@@ -1,0 +1,16 @@
+// Custom.scss
+@use './general';
+
+// Then add additional custom code here
+
+//SECTIONS 
+@use './sections/animate';
+@use './sections/mixins';
+@use './sections/typography';
+@use './sections/buttons';
+
+
+//COMPONENTS
+@use './components/banner';
+
+

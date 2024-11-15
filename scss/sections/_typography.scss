@@ -1,0 +1,27 @@
+@use '../general' as *;
+@use '../sections/mixins' as *;
+
+    .display-3 {
+        display: inline-block;
+        text-transform: uppercase;
+        font-weight: 600;
+        @include fontFamily;
+        color: $baby-black;
+        // line-height: 4rem;
+
+        &__gradient {
+            @include gradient;
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+    }
+
+.banner__p {
+    display: inline-block;
+    max-width: 400px;
+    font-weight: 600;
+    color: $baby-black;
+    // line-height: 1.5;
+}
