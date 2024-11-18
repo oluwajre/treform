@@ -11873,7 +11873,7 @@ textarea.form-control-lg {
 }
 
 .banner {
-  background-image: linear-gradient(rgba(243, 238, 233, 0.55), rgba(243, 238, 233, 0.55)), url("../../src/assets/images/banner/background-image.webp") !important;
+  background-image: linear-gradient(rgba(243, 238, 233, 0.55), rgba(243, 238, 233, 0.55)), url("/src/assets/images/banner/background-image.webp") !important;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
