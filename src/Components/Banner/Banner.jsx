@@ -32,7 +32,7 @@ const Banner = () => {
                     <span className="d-block">2:00 pm</span>
                   </p>
               </div>
-              <button className="btn text-white button-main" type='button'>Register Now</button>
+              <button className="btn text-white button-main position-relative" type='button'>Register Now <div className='ping position-absolute top-50 start-50 translate-middle shadow-lg' style={{ height: '150%', border: '10px solid #5E17DD', width: '113%', borderRadius: '10px'}}></div></button>
               <div className='position-absolute text-center stamp'>
                 <img src={red_stamp} alt="stamp" className='img-fluid' />
                 <p className='position-absolute top-50 start-50 translate-middle fw-bold text-white text-uppercase lead'>IT'S FREE</p>

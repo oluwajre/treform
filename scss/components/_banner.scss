@@ -70,16 +70,20 @@
     position: absolute;
     right: 0;
     top: 30%;
-    width: 50%;
+    width: 45%;
     max-width: 300px;
 
     @include media-breakpoint-up(sm) {
-        top: 10%;
+        top: 5%;
     }
 
     img {
-        padding: 10px;
+        padding: 7px;
         background: linear-gradient(to bottom, rgba($secondary, 0.95), rgba($primary, 0.95));
+
+        @include media-breakpoint-up(sm) {
+            padding: 10px;
+        }
     }
 }
 
