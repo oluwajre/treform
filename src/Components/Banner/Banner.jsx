@@ -1,6 +1,7 @@
 import React from 'react'
 import './Banner.css';
 import { polygon_1, polygon_2, speaker_picture, red_stamp, trenova_logo, napps_logo } from '../../Constants/banner';
+import { webinarDetails } from '../../Constants/details';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCalendarDays} from '@fortawesome/free-regular-svg-icons';
 
@@ -28,8 +29,8 @@ const Banner = () => {
               <div className="date-box d-flex align-items-center mb-4">
                   <FontAwesomeIcon icon={faCalendarDays} className='icon me-2' />
                   <p className='banner__p m-0'>
-                    <span className='d-block'>November 27th, 2024</span>
-                    <span className="d-block">2:00 pm</span>
+                    <span className='d-block'>{webinarDetails.date}</span>
+                    <span className="d-block">{webinarDetails.time}</span>
                   </p>
               </div>
               <button className="btn text-white button-main position-relative" type='button'>Register Now <div className='ping position-absolute top-50 start-50 translate-middle shadow-lg' style={{ height: '150%', border: '10px solid #5E17DD', width: '113%', borderRadius: '10px'}}></div></button>

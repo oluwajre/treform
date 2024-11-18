@@ -1,6 +1,6 @@
 const webinarDetails = {
     topic: 'Proven Strategies for Revenue and Profitability Growth in Private Elementary and Secondary School Business.',
-    date: 'Friday, 27th November, 2024',
+    date: '27th November, 2024',
     time: '3:00 pm',
     platform: { 
         name: 'Google Meet.'
