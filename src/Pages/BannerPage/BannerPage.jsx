@@ -1,11 +1,12 @@
 import React from 'react';
-import Banner from '../../Components/Banner/Banner';
+import { Banner, EventDetails } from '../../Components';
 import './BannerPage.css';
 
 const BannerPage = () => {
   return (
     <>
       <Banner />
+      <EventDetails />
     </>
   )
 }

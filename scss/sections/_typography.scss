@@ -16,3 +16,42 @@
     font-weight: 600;
     color: $baby-black;
 }
+
+.section-title {
+    color: $baby-black;
+    font-weight: 600;
+    font-size: 2rem;
+    @include fontFamily;
+
+    @include media-breakpoint-up(sm) {
+        font-size: 3rem;
+    }
+    
+}
+
+.section-sub-title {
+    color: $baby-black;
+    font-weight: 600;
+    font-size: 1.6rem;
+    @include fontFamily;
+
+    // @include media-breakpoint-up(sm) {
+    //     font-size: 1rem;
+    // }
+}
+
+.heading-line {
+    width: 5rem;
+    height: 3px;
+    background-color: $secondary;
+    margin-bottom: .5rem;
+}
+
+.text {
+    font-weight: 400;
+}
+
+.highlighter {
+    font-size: 1em;
+    font-weight: 400;
+}

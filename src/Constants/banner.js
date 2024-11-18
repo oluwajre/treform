@@ -6,5 +6,6 @@ import speaker_picture from '../assets/images/banner/speaker-picture.png';
 import napps_logo from '../assets/images/banner/napps-logo.png';
 
 
+
 export { polygon_1, polygon_2, red_stamp, trenova_logo, speaker_picture, napps_logo };
 

@@ -11910,6 +11910,41 @@ textarea.form-control-lg {
   color: #112F3A;
 }
 
+.section-title {
+  color: #112F3A;
+  font-weight: 600;
+  font-size: 2rem;
+  font-family: "Poppins", serif !important;
+}
+@media (min-width: 576px) {
+  .section-title {
+    font-size: 3rem;
+  }
+}
+
+.section-sub-title {
+  color: #112F3A;
+  font-weight: 600;
+  font-size: 1.6rem;
+  font-family: "Poppins", serif !important;
+}
+
+.heading-line {
+  width: 5rem;
+  height: 3px;
+  background-color: #5E17DD;
+  margin-bottom: 0.5rem;
+}
+
+.text {
+  font-weight: 400;
+}
+
+.highlighter {
+  font-size: 1em;
+  font-weight: 400;
+}
+
 .button-main {
   border: none;
   font-weight: 600;
@@ -12014,6 +12049,41 @@ textarea.form-control-lg {
 }
 .backround-circle .speaker-text span {
   display: block;
+}
+
+.details-list-group {
+  list-style-type: none;
+  padding: 0;
+}
+.details-list-group__list {
+  margin-bottom: 0.6em;
+}
+.details-list-group__list .icon {
+  background-color: rgba(94, 23, 221, 0.85);
+  color: #fff;
+  padding: 0.1em;
+  border-radius: 3px;
+  margin-right: 4px;
+  font-size: 0.9em;
+}
+
+.session .icon {
+  color: rgba(94, 23, 221, 0.85);
+  padding: 0.1em;
+  border-radius: 3px;
+  margin-right: 6px;
+  font-size: 0.9em;
+}
+
+.about-trainer-img {
+  max-height: 450px;
+}
+
+.about-trainer-text .icon {
+  color: rgba(94, 23, 221, 0.85);
+  border-radius: 3px;
+  margin-right: 6px;
+  font-size: 1.9em;
 }
 
 /*# sourceMappingURL=custom.css.map */

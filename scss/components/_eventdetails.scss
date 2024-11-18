@@ -1,0 +1,45 @@
+@use '../general' as *;
+
+.details-list-group {
+    list-style-type: none;
+    padding: 0;
+
+    &__list {
+        margin-bottom: .6em;
+
+        .icon {
+            background-color: rgba($secondary, .85);
+            color: $white;
+            padding: .1em;
+            border-radius: 3px;
+            margin-right: 4px;
+            font-size: .9em;
+        }
+    }
+}
+
+.session {
+
+    .icon {
+        color: rgba($secondary, .85);
+        padding: .1em;
+        border-radius: 3px;
+        margin-right: 6px;
+        font-size: .9em;
+    }
+}
+
+.about-trainer-img {
+    max-height: 450px;
+}
+
+.about-trainer-text {
+
+    .icon {
+        color: rgba($secondary, .85);
+        border-radius: 3px;
+        margin-right: 6px;
+        font-size: 1.9em;
+    }
+    
+}

@@ -1,3 +1,4 @@
 import Banner from "./Banner/Banner";
+import EventDetails from "./EventDetails/EventDetails";
 
-export { Banner }
+export { Banner, EventDetails };
