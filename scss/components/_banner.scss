@@ -2,8 +2,8 @@
 @use '../sections/mixins' as *;
 
 .banner {
-    background-image: linear-gradient(rgba($baby-white, 0.55), rgba($baby-white, 0.55)), url('../../src/assets/images/banner/background-image.webp');
-    width: 100vw;
+    background-image: linear-gradient(rgba($baby-white, 0.55), rgba($baby-white, 0.55)), url('../../src/assets/images/banner/background-image.webp') !important;
+    // width: 100vw;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;

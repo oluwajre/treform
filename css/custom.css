@@ -11849,7 +11849,7 @@ textarea.form-control-lg {
   display: inline-block;
   text-transform: uppercase;
   font-weight: 600;
-  font-family: "Poppins", serif;
+  font-family: "Poppins", serif !important;
   color: #112F3A;
 }
 
@@ -11873,8 +11873,7 @@ textarea.form-control-lg {
 }
 
 .banner {
-  background-image: linear-gradient(rgba(243, 238, 233, 0.55), rgba(243, 238, 233, 0.55)), url("../../src/assets/images/banner/background-image.webp");
-  width: 100vw;
+  background-image: linear-gradient(rgba(243, 238, 233, 0.55), rgba(243, 238, 233, 0.55)), url("../../src/assets/images/banner/background-image.webp") !important;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
