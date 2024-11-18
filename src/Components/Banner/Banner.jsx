@@ -13,8 +13,8 @@ const Banner = () => {
 
         <div className="container mt-1">
         <div className="logo-container d-flex justify-content-end align-items-center">
-          <img src={napps_logo} alt="trenova logo" className='z-2 logo me-3'/>
-          <p className="text-uppercase m-0 me-3">in conjuction with</p>
+          {/* <img src={napps_logo} alt="trenova logo" className='z-2 logo me-3'/>
+          <p className="text-uppercase m-0 me-3">in conjuction with</p> */}
           <img src={trenova_logo} alt="trenova logo" className='z-2 logo'/>
         </div>
           </div> 
