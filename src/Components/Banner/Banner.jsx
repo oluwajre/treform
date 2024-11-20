@@ -8,7 +8,7 @@ import { faCalendarDays} from '@fortawesome/free-regular-svg-icons';
 
 const Banner = () => {
   return (
-    <section className="banner" id="banner">
+    <section className="banner" id="#">
         <img src={polygon_2} alt="background polygon 1" className='z-1 background-shape2'/>
         <img src={polygon_1} alt="background polygon 1" className='z-1 background-shape1'/>
 

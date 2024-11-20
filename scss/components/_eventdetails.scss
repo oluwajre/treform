@@ -29,17 +29,22 @@
     }
 }
 
-.about-trainer-img {
-    max-height: 450px;
-}
+.about {
+    background-color: $baby-black;
 
-.about-trainer-text {
-
-    .icon {
-        color: rgba($secondary, .85);
-        border-radius: 3px;
-        margin-right: 6px;
-        font-size: 1.9em;
+    .about-trainer-img {
+        max-height: 450px;
     }
     
+    .about-trainer-text {
+    
+        .icon {
+            color: rgba($secondary, .85);
+            border-radius: 3px;
+            margin-right: 6px;
+            font-size: 1.9em;
+        }
+        
+    }
 }
+

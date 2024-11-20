@@ -1,5 +1,5 @@
 import React from 'react';
-import { Banner, EventDetails } from '../../Components';
+import { Banner, EventDetails, Footer } from '../../Components';
 import './BannerPage.css';
 
 const BannerPage = () => {
@@ -7,6 +7,7 @@ const BannerPage = () => {
     <>
       <Banner />
       <EventDetails />
+      <Footer />
     </>
   )
 }

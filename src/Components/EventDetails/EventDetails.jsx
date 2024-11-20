@@ -54,31 +54,36 @@ const EventDetails = () => {
                     </p>
                 </div>
             </div>
-
-            <div className="row justify-content-center my-5">
-                <div className="col-12 text-center mb-3">
-                    <h5 className="display-5 section-sub-title">About Trainer</h5>
-                    <div className="heading-line mx-auto"></div>
-                </div>
-                <div className="col-md-6">
-                    <p className='lead text about-trainer-text'>
-                        <FontAwesomeIcon icon={faQuoteLeft} className='icon' />
-                        As a seasoned expert in private school growth and profitability strategies, our lead trainer, 
-                        Mr. Ajayi Samuel has 20 year extensive experience working with private school proprietors to 
-                        improve financial performance. With a deep understanding of the unique challenges faced by 
-                        the private school sector, he brings a proven track record of helping schools implement 
-                        practical solutions that lead to sustainable growth.
-                        <FontAwesomeIcon icon={faQuoteRight} className='icon' />
-                    </p>
-                </div>
-                <div className="col-md-6 text-center">
-                    <img src={speaker_picture} alt="" className='img-fluid shadow about-trainer-img'/>
-                </div>
-                <div className="col-12 text-center mt-5">
-                    <button className="btn text-white button-main position-relative" type='button'>Register Now <div className='ping position-absolute top-50 start-50 translate-middle shadow-lg' style={{ height: '150%', border: '10px solid #5E17DD', width: '113%', borderRadius: '10px'}}></div></button>
+        </div>
+        
+        <div className="about mt-5">
+            <div className="container">
+                <div className="row justify-content-center">
+                    <div className="col-12 text-center mb-3">
+                        <h5 className="display-5 section-sub-title text-white mt-5">About Trainer</h5>
+                        <div className="heading-line mx-auto"></div>
+                    </div>
+                    <div className="col-md-6">
+                        <p className='lead text about-trainer-text text-white'>
+                            <FontAwesomeIcon icon={faQuoteLeft} className='icon' />
+                            As a seasoned expert in private school growth and profitability strategies, our lead trainer, 
+                            Mr. Ajayi Samuel has 20 year extensive experience working with private school proprietors to 
+                            improve financial performance. With a deep understanding of the unique challenges faced by 
+                            the private school sector, he brings a proven track record of helping schools implement 
+                            practical solutions that lead to sustainable growth.
+                            <FontAwesomeIcon icon={faQuoteRight} className='icon' />
+                        </p>
+                    </div>
+                    <div className="col-md-6 text-center">
+                        <img src={speaker_picture} alt="" className='img-fluid shadow about-trainer-img'/>
+                    </div>
+                    <div className="col-12 text-center my-5">
+                        <button className="btn text-white button-main position-relative" type='button'>Register Now </button>
+                    </div>
                 </div>
             </div>
         </div>
+        
     </section>
   )
 }
