@@ -1,11 +1,15 @@
 import React, { useState } from 'react';
 import './MainForm.css';
 import SchoolDataForm from '../SchoolDataForm/SchoolDataForm';
+import PersonalDataForm from '../PersonalDataForm/PersonalDataForm';
+import { webinarDetails } from '../../Constants/details';
 import {FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowRight, faArrowLeft } from '@fortawesome/free-solid-svg-icons'
 
 const MainForm = () => {
     const [currentSlide, setCurrentSlide] = useState(0);
+
+    const [errors, setErrors] = useState({});
 
     const [schoolData, setSchoolData] = useState({
         schoolName: '',
@@ -14,8 +18,6 @@ const MainForm = () => {
         schoolWhatsappNumber: '',
         schoolAddress: ''
     });
-
-    const [errors, setErrors] = useState({});
 
     const validateSchoolDataForm = () => {
         const newErrors = {};
@@ -41,6 +43,49 @@ const MainForm = () => {
         return Object.keys(newErrors).length === 0; // True if no errors
     };
 
+    const [attendeeData, setAttendeeData] = useState({
+        attendeeFullName: '',
+        attendeeEmail: '',
+        attendeeWhatsappNumber: '',
+        attendeePhoneNumber: '',
+        attendeeRole: '',
+        event: webinarDetails.theme,
+        ownerFullName: '',
+        ownerWhatsappNumber: ''
+    });
+
+    const validateAttendeDataForm = () => {
+        const newErrors = {}
+        if (!attendeeData.attendeeFullName) {
+            newErrors.attendeeFullName = "Full name is required."
+        };
+
+        if (!attendeeData.attendeeEmail) {
+            newErrors.attendeeEmail = "Email Adresss is required.";
+        } else if (!attendeeData.attendeeEmail.includes('@')) {
+            newErrors.attendeeEmail = "Valid email required '@'";
+        }
+
+        if (!attendeeData.attendeeWhatsappNumber || attendeeData.attendeeWhatsappNumber.length !== 11) {
+            newErrors.attendeeWhatsappNumber = "Valid phone number is required.";
+        }
+
+        if (!attendeeData.attendeeRole || attendeeData.attendeeRole === '') {
+            newErrors.attendeeRole = "Pick a Role";
+        }else if(attendeeData.attendeeRole !== 'representative') {
+            attendeeData.ownerFullName = attendeeData.attendeeFullName;
+            attendeeData.ownerWhatsappNumber = attendeeData.attendeeWhatsappNumber;
+        }
+
+        if (!attendeeData.ownerFullName) {
+            newErrors.ownerFullName = "School Owner's Full name is required."
+        }
+
+        setErrors(newErrors);
+        return Object.keys(newErrors).length === 0; // True if no errors
+    };
+
+
     const handleNext = () => {
         if (currentSlide === 0) {
             if (validateSchoolDataForm()) {
@@ -54,6 +99,10 @@ const MainForm = () => {
             setCurrentSlide((prevSlide) => prevSlide - 1);
         }
     };
+
+    const handleSubmit = () => {
+        validateAttendeDataForm();
+    }
 
     return (
         <section className="mainform">
@@ -75,9 +124,12 @@ const MainForm = () => {
                             />
 
                             {/* Slide 2 */}
-                            <div className={`carousel-item ${currentSlide === 1 ? 'active' : ''}`}>
-                                <p>Hello</p>
-                            </div>
+                            <PersonalDataForm 
+                                currentSlide={currentSlide} 
+                                attendeeData={attendeeData} 
+                                setAttendeeData={setAttendeeData} 
+                                errors={errors} 
+                            />
                         </div>
 
                         <div className="d-flex justify-content-between my-4">
@@ -91,7 +143,7 @@ const MainForm = () => {
                             </button>
 
                             {currentSlide === 1 ? (
-                                <button className="btn btn-primary px-5" type="button">Submit</button>
+                                <button className="btn btn-primary px-5" type="button" onClick={handleSubmit}>Submit</button>
                             ) : (
                                 <button
                                     className="btn btn-primary px-5"

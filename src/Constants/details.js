@@ -1,4 +1,5 @@
 const webinarDetails = {
+    theme: 'Scale Up Series 3.7',
     topic: 'Proven Strategies for Revenue and Profitability Growth in Private Elementary and Secondary School Business.',
     date: '27th November, 2024',
     time: '3:00 pm',

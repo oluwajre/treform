@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './SchoolDataForm';
 
 const SchoolDataForm = ({ currentSlide, schoolData, setSchoolData, errors }) => {
@@ -10,10 +10,10 @@ const SchoolDataForm = ({ currentSlide, schoolData, setSchoolData, errors }) => 
 
 
   return (
-    <div className={`carousel-item ${currentSlide===0? 'active': ''}`}>
+    <div className={`carousel-item slide-right ${currentSlide===0? 'active': ''}`}>
         <div className='px-1'>
             <h5 className="display-5 section-sub-title mb-1">School Information</h5>
-            <p className='form-text-basic mb-1'>Your School is of upmost importance to us, let us know about your School.</p>
+            <p className='form-text-basic mb-1'>Your school is our top priority—tell us more about it!</p>
             <p className='required-indicator'>* Required Field</p>
         </div>
 
@@ -66,7 +66,8 @@ const SchoolDataForm = ({ currentSlide, schoolData, setSchoolData, errors }) => 
                     id="schoolPhoneNumber" 
                     name='schoolPhoneNumber'
                     value={schoolData.schoolPhoneNumber}
-                    placeholder='09137819540' 
+                    placeholder='09137819540'
+                    maxLength='11'
                     onChange={handleInputChange}
                     required
                 />
@@ -82,6 +83,7 @@ const SchoolDataForm = ({ currentSlide, schoolData, setSchoolData, errors }) => 
                     id="schoolWhatsappNumber"
                     name='schoolWhatsappNumber'
                     value={schoolData.schoolWhatsappNumber}
+                    maxLength='11'
                     onChange={handleInputChange} 
                 />
             </div>
