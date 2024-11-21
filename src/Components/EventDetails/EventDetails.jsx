@@ -1,5 +1,6 @@
 import React from 'react';
 import './EventDetails.css';
+import { Link } from 'react-router-dom';
 import { webinarDetails } from '../../Constants/details';
 import { speaker_picture } from '../../Constants/banner';
 import {FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -40,7 +41,7 @@ const EventDetails = () => {
                     <p className="lead text"><FontAwesomeIcon icon={faClock} className='icon' /><span className="fw-bold">Duration:</span> {webinarDetails.duration}</p>
                 </div>
                 <div className="col-12 mt-3 text-center">
-                    <button className="btn text-white button-main position-relative" type='button'>Register Now <div className='ping position-absolute top-50 start-50 translate-middle shadow-lg' style={{ height: '150%', border: '10px solid #5E17DD', width: '113%', borderRadius: '10px'}}></div></button>
+                    <Link className="btn text-white button-main position-relative" to='/form'>Register Now <div className='ping position-absolute top-50 start-50 translate-middle shadow-lg' style={{ height: '150%', border: '10px solid #5E17DD', width: '113%', borderRadius: '10px'}}></div></Link>
                     <p className="lead text mt-2 text-secondary fst-italic">See you there...</p>
                 </div>
                 <div className="col-12 mt-3">
@@ -78,7 +79,7 @@ const EventDetails = () => {
                         <img src={speaker_picture} alt="" className='img-fluid shadow about-trainer-img'/>
                     </div>
                     <div className="col-12 text-center my-5">
-                        <button className="btn text-white button-main position-relative" type='button'>Register Now </button>
+                        <Link className="btn text-white button-main position-relative" to='/form'>Register Now </Link>
                     </div>
                 </div>
             </div>

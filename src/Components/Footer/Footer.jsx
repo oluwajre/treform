@@ -1,5 +1,6 @@
 import React from 'react';
 import './Footer.css';
+import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPhoneVolume, faEnvelopeOpenText, faMapLocationDot } from '@fortawesome/free-solid-svg-icons';
 import { faCopyright } from '@fortawesome/free-regular-svg-icons';
@@ -41,7 +42,7 @@ const Footer = () => {
                     <div className="footer-heading-line"></div>
                     <p className='mt-2 mt-md-4'>7B, Ogunsiji Close, Off Ikeja Medical Center, Allen Avenue, Ikeja, Lagos, Nigeria.</p>
                     <div className="my-4">
-                        <button className="btn text-white button-main position-relative" type='button'>Register Now</button>
+                        <Link className="btn text-white button-main position-relative" to='/form'>Register Now</Link>
                 </div>
                 </div>
                 <div className="col-md-3 footer-middle-2 mb-2">

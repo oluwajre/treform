@@ -18,7 +18,16 @@ $primary: #EA8822;
 $secondary: #5E17DD;
 $baby-black: #112F3A;
 $baby-white: #F3EEE9;
+$pink: #ff0890;
 
+
+$focus-ring-opacity: .25;
+$focus-ring-color: rgba($secondary, $focus-ring-opacity);
+
+// $component-active-bg:  $secondary;
+$input-focus-border-color: tint-color($secondary, 50%);
+
+$form-label-color: $gray-900;
 
 // Include any default variable overrides here (though functions won't be available)
 

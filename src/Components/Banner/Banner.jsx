@@ -1,5 +1,6 @@
 import React from 'react'
 import './Banner.css';
+import { Link } from 'react-router-dom';
 import { polygon_1, polygon_2, speaker_picture, red_stamp, trenova_logo, napps_logo } from '../../Constants/banner';
 import { webinarDetails } from '../../Constants/details';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -33,7 +34,7 @@ const Banner = () => {
                     <span className="d-block">{webinarDetails.time}</span>
                   </p>
               </div>
-              <button className="btn text-white button-main position-relative" type='button'>Register Now <div className='ping position-absolute top-50 start-50 translate-middle shadow-lg' style={{ height: '150%', border: '10px solid #5E17DD', width: '113%', borderRadius: '10px'}}></div></button>
+              <Link className="btn text-white button-main position-relative" to='/form'>Register Now <div className='ping position-absolute top-50 start-50 translate-middle shadow-lg' style={{ height: '150%', border: '10px solid #5E17DD', width: '113%', borderRadius: '10px'}}></div></Link>
               <div className='position-absolute text-center stamp'>
                 <img src={red_stamp} alt="stamp" className='img-fluid' />
                 <p className='position-absolute top-50 start-50 translate-middle fw-bold text-white text-uppercase lead'>IT'S FREE</p>

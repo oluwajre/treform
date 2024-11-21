@@ -20,11 +20,11 @@
 .section-title {
     color: $baby-black;
     font-weight: 600;
-    font-size: 2rem;
+    font-size: 1.75rem;
     @include fontFamily;
 
     @include media-breakpoint-up(sm) {
-        font-size: 3rem;
+        font-size: 2.1rem;
     }
     
 }
@@ -32,12 +32,12 @@
 .section-sub-title {
     color: $baby-black;
     font-weight: 600;
-    font-size: 1.6rem;
+    font-size: 1.3rem;
     @include fontFamily;
 
-    // @include media-breakpoint-up(sm) {
-    //     font-size: 1rem;
-    // }
+    @include media-breakpoint-up(sm) {
+        font-size: 1.5rem;
+    }
 }
 
 .heading-line {
@@ -53,5 +53,16 @@
 
 .highlighter {
     font-size: 1em;
+    font-weight: 400;
+}
+
+.form-text-basic {
+    color: $gray-700;
+    font-weight: 400;
+    // font-size: 1.1em;
+}
+
+.required-indicator {
+    color: $pink;
     font-weight: 400;
 }
