@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import './MainForm.css';
 import SchoolDataForm from '../SchoolDataForm/SchoolDataForm';
 import PersonalDataForm from '../PersonalDataForm/PersonalDataForm';
@@ -6,7 +7,9 @@ import { webinarDetails } from '../../Constants/details';
 import {FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowRight, faArrowLeft } from '@fortawesome/free-solid-svg-icons'
 
-const MainForm = () => {
+const MainForm = ({ setIsLoading }) => {
+    const navigate = useNavigate();
+
     const [currentSlide, setCurrentSlide] = useState(0);
 
     const [errors, setErrors] = useState({});
@@ -100,13 +103,58 @@ const MainForm = () => {
         }
     };
 
-    const handleSubmit = () => {
-        validateAttendeDataForm();
+
+    const handleSubmit = async (e) => {
+        if (validateAttendeDataForm()) {
+
+            e.preventDefault();
+
+            setIsLoading(true);
+
+            const schoolProspectData = {
+                "School_Name": schoolData.schoolName,
+                "School_Email": schoolData.schoolEmail,
+                "School_Phone_Number": schoolData.schoolPhoneNumber,
+                "School_Whatsapp_Number": schoolData.schoolWhatsappNumber,
+                "School_Address": schoolData.schoolAddress,
+                "Attendee_Full_Name": attendeeData.attendeeFullName,
+                "Attendee_Email": attendeeData.attendeeEmail,
+                "Attendee_Whatsapp_Number": attendeeData.attendeeWhatsappNumber,
+                "Attendee_Phone_Number": attendeeData.attendeePhoneNumber,
+                "Attendee_Role": attendeeData.attendeeRole,
+                "Event_Attending": attendeeData.event,
+                "Owner_Full_Name": attendeeData.ownerFullName,
+                "Owner_Whatsapp_Number": attendeeData.ownerWhatsappNumber
+            }
+
+            try {
+                const response = await fetch('https://x8ki-letl-twmt.n7.xano.io/api:da0vHL3V/school_prospects', {
+                    method: 'POST',
+                    body: JSON.stringify(schoolProspectData),
+                    headers: { 'Content-Type': 'application/json' },
+                });
+        
+                if (!response.ok) {
+                    throw new Error (`API request failed with status ${response.status}. Please Try Again Later`);
+                    
+                }
+        
+                else {
+                    navigate('/finish');
+                }
+        
+            } catch (error) {
+                setIsLoading(false);
+                setTimeout(() => {alert(error || 'Error in Submitting, Try Again')}, 1000);
+            }
+
+        }
+        
     }
 
     return (
         <section className="mainform">
-            <div className="container mt-3">
+            <div className="container pt-3">
                 <div className="text-center">
                     <h1 className="display-1 section-title">Registration Form</h1>
                     <div className="heading-line mx-auto"></div>

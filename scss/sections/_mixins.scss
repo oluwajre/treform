@@ -12,3 +12,10 @@
 @mixin transitionProperty {
     transition: .5s all linear;
 }
+
+@mixin positionAbsolute {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}

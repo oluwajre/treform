@@ -12257,4 +12257,51 @@ textarea.form-control-lg {
   margin-top: 0.5rem;
 }
 
+.congrat {
+  margin-bottom: 12rem;
+}
+.congrat .tassles {
+  max-width: 300px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+@media (min-width: 576px) {
+  .congrat .tassles {
+    max-width: 400px;
+  }
+}
+.congrat .whatsapp-button a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.congrat .whatsapp-button a:hover .icon {
+  color: #fff;
+}
+.congrat .whatsapp-button a .icon {
+  font-size: 1.4em;
+  color: #198754;
+}
+
+.page-body {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  background-color: rgba(206, 212, 218, 0.15);
+  backdrop-filter: blur(1px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.page-body .loading {
+  width: 5rem;
+  height: 5rem;
+}
+
 /*# sourceMappingURL=custom.css.map */

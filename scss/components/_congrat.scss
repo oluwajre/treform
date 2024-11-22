@@ -1,0 +1,39 @@
+@use '../general' as *;
+@use '../sections/mixins' as *;
+
+
+.congrat {
+    margin-bottom: 12rem;
+
+    .tassles {
+        max-width: 300px;
+        @include positionAbsolute;
+    
+        @include media-breakpoint-up(sm) {
+            max-width: 400px;
+        }
+    }
+    
+    .whatsapp-button {
+    
+        a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+    
+            &:hover {
+                .icon {
+                    color: $white;
+                }
+            }
+    
+            .icon {
+                font-size: 1.4em;
+                color: $green; 
+            }
+        }
+    
+        
+    }
+}
+

@@ -6,7 +6,8 @@ const webinarDetails = {
     platform: { 
         name: 'Google Meet.'
     },
-    duration: '2 - 3 hours'
+    duration: '2 - 3 hours',
+    whatsappLink: 'https://chat.whatsapp.com/Gj5KemBw98oJdCFDARcr4N'
 };
 
 export { webinarDetails };
