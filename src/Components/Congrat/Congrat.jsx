@@ -25,6 +25,10 @@ const Congrat = () => {
                 <div className="z-1 col-12 mt-1 mt-sm-5 whatsapp-button">
                     <a className="btn btn-lg btn-outline-success shadow mx-auto py-2 px-4" href={webinarDetails.whatsappLink}><FontAwesomeIcon icon={faWhatsapp} className='icon me-1' />Join Now</a>
                 </div>
+
+                <div className="mt-3 text-center">
+                    <p style={{color: '#495057'}}>You'll receive an Email/Whatsapp Confirmation Message Shortly.</p>
+                </div>
             </div>
             
         </div>

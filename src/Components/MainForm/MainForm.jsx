@@ -5,7 +5,8 @@ import SchoolDataForm from '../SchoolDataForm/SchoolDataForm';
 import PersonalDataForm from '../PersonalDataForm/PersonalDataForm';
 import { webinarDetails } from '../../Constants/details';
 import {FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faArrowRight, faArrowLeft } from '@fortawesome/free-solid-svg-icons'
+import { faArrowRight, faArrowLeft } from '@fortawesome/free-solid-svg-icons';
+import { sendConfirmationEmail } from '../../Services/EmailService';
 
 const MainForm = ({ setIsLoading }) => {
     const navigate = useNavigate();
@@ -141,6 +142,7 @@ const MainForm = ({ setIsLoading }) => {
         
                 else {
                     navigate('/finish');
+                    await sendConfirmationEmail(attendeeData.attendeeEmail, attendeeData.attendeeFullName, schoolData.schoolName, webinarDetails);
                 }
         
             } catch (error) {

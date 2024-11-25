@@ -4,7 +4,7 @@ const webinarDetails = {
     date: '27th November, 2024',
     time: '3:00 pm',
     platform: { 
-        name: 'Google Meet.'
+        name: 'Google Meet'
     },
     duration: '2 - 3 hours',
     whatsappLink: 'https://chat.whatsapp.com/Gj5KemBw98oJdCFDARcr4N'
